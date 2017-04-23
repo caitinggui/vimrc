@@ -137,3 +137,10 @@ let g:autopep8_disable_show_diff=1
 let g:autopep8_max_line_length=79
 Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
+
+" global catalog search
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     
+let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$', 'file':
+'\v\.(exe|so|dll)$'}
+Plugin 'kien/ctrlp.vim'

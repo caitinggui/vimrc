@@ -58,16 +58,16 @@ F5:  运行文件
 F7:  静态代码检查
 
 
-<leader>cc, cu:  多行注释, 取消注释
+\<leader\>cc, cu:  多行注释, 取消注释
 
 
-<space>:  代码折叠
+\<space\>:  代码折叠
 
 
 Tab:  代码补全
 
 
-<leader>g:  跳转到定义处
+\<leader\>g:  跳转到定义处
 
 
 :Autopep8:  采用pep8格式化代码

@@ -2,7 +2,7 @@ set encoding=utf-8           " 设置支持utf-8格式文件
 set clipboard=unnamed        "使用系统剪切板
 set nu                       "使用行号
 set tabstop=4                "设置table长度"
-let mapleader=","
+let mapleader=";"
 
 set nocompatible             " required
 filetype off                 " required

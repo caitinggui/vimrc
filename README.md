@@ -70,7 +70,13 @@ Tab:  代码补全
 \<leader\>g:  跳转到定义处
 
 
+Ctrl + o:  从定义处返回
+
+
 :Autopep8:  采用pep8格式化代码
 
 
 Ctrl + p:  项目文件查找
+
+
+Ctrl + w + w:  切换窗格

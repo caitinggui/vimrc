@@ -124,7 +124,6 @@ endfunction
 
 
 " 自动补全括号等以及多行注释
-let mapleader=','
 " <leader>cc行前注释, <leader>cu解除注释
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'

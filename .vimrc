@@ -141,6 +141,5 @@ Plugin 'tell-k/vim-autopep8'
 " global catalog search
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     
-let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$', 'file':
-'\v\.(exe|so|dll)$'}
+let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$', 'file':'\v\.(exe|so|dll)$'}
 Plugin 'kien/ctrlp.vim'

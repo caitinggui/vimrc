@@ -1,3 +1,4 @@
+set nocompatible             " 设置不兼容vi"
 set encoding=utf-8           " 设置支持utf-8格式文件
 set clipboard=unnamed        "使用系统剪切板
 set nu                       "使用行号
@@ -128,13 +129,9 @@ endfunction
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 
-"缩进指示线
-let g:indentLine_char='┆'
-let g:indentLine_enabled = 1
 "autopep8设置"
 let g:autopep8_disable_show_diff=1
 let g:autopep8_max_line_length=79
-Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
 
 " global catalog search

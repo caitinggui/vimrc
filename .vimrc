@@ -90,8 +90,10 @@ let NERDTreeChDirMode=1
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd w︎
 " 当前无文件时,nerdtree自动关闭
-:autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 Plugin 'scrooloose/nerdtree'
 
 " A plugin of NERDTree showing git status

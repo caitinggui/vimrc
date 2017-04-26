@@ -81,13 +81,13 @@ Ctrl + p:  项目文件查找
 
 NERDTree的快捷键:
 ctrl + w + h    光标 focus 左侧树形目录  
-ctrl + w + l    光标 focus 右侧文件显示窗口 
-ctrl + w + w    光标自动在左右侧窗口切换 
-t       在新 Tab 中打开选中文件/书签，并跳到新 Tab 
-T       在新 Tab 中打开选中文件/书签，但不跳到新 Tab 
-i       split 一个新窗口打开选中文件，并跳到该窗口 
-gi      split 一个新窗口打开选中文件，但不跳到该窗口 
-s       vsplit 一个新窗口打开选中文件，并跳到该窗口 
-gs      vsplit 一个新 窗口打开选中文件，但不跳到该窗口 
-gT      前一个 tab 
-gt      后一个 tab 
+ctrl + w + l    光标 focus 右侧文件显示窗口  
+ctrl + w + w    光标自动在左右侧窗口切换  
+t       在新 Tab 中打开选中文件/书签，并跳到新 Tab  
+T       在新 Tab 中打开选中文件/书签，但不跳到新 Tab  
+i       split 一个新窗口打开选中文件，并跳到该窗口  
+gi      split 一个新窗口打开选中文件，但不跳到该窗口  
+s       vsplit 一个新窗口打开选中文件，并跳到该窗口  
+gs      vsplit 一个新 窗口打开选中文件，但不跳到该窗口  
+gT      前一个 tab  
+gt      后一个 tab  

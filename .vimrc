@@ -94,7 +94,7 @@ let NERDTreeWinSize=25
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd l
 " 当前无文件时,nerdtree自动关闭
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plugin 'scrooloose/nerdtree'
 
 " A plugin of NERDTree showing git status

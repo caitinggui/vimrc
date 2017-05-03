@@ -142,3 +142,10 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     
 let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$', 'file':'\v\.(exe|so|dll)$'}
 Plugin 'kien/ctrlp.vim'
+
+" For function list and macro
+map <F3> :TagbarToggle<CR>
+let g:tagbar_width=25
+let g:tagbar_sort=1
+au BufNewFile,BufRead *.py,*.c,*.cpp call tagbar#autoopen()
+Plugin 'majutsushi/tagbar'

@@ -29,6 +29,9 @@ A beautiful vim IDE for Python
   $ sudo python2 -m pip install flake8  # 安装flake8包
 
 
+  $ sudo yum install ctags  # for ubuntu: sudo apt-get install ctags
+
+
 5、安装YouCompleteMe：（如果有异常请参考官方文档）
 
 
@@ -50,6 +53,9 @@ A beautiful vim IDE for Python
 
 
 F2:  nerdtree，文件目录关闭打开
+
+
+F2:  tagbar，大纲式导航，包括类、函数、变量
 
 
 F5:  运行文件
@@ -91,3 +97,8 @@ s       vsplit 一个新窗口打开选中文件，并跳到该窗口
 gs      vsplit 一个新 窗口打开选中文件，但不跳到该窗口  
 gT      前一个 tab  
 gt      后一个 tab  
+
+
+tagbar快捷键:  
+o       打开/折叠标签  
+<space> 显示定义  

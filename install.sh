@@ -60,15 +60,17 @@ if [[ -d ~/.vim/bundle/YouCompleteMe  ]]; then
 else
     cd ~/.vim/bundle/YouCompleteMe;
 	if [ $OS='centos' ]
-	then
-		$os_install install -y cmake
-		$os_install groupinstall -y "Development Tools"
-	    ./install.py --clang-completer
+	then {
+		$os_install install -y cmake;
+		$os_install groupinstall -y "Development Tools";
+	    ./install.py --clang-completer;
+    }
 	elif [ $OS='debian' ]
-	then
-        $os_install install -y build-essential cmake
-		$os_install install -y python-dev python3-dev
-	    ./install.py --clang-completer
+	then {
+        $os_install install -y build-essential cmake;
+		$os_install install -y python-dev python3-dev;
+	    ./install.py --clang-completer;
+    }
 	else
 		echo 'This script can not install YouCompleteMe, please install it manually'
 	fi

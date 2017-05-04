@@ -23,6 +23,7 @@ if hash git 2>/dev/null; then
 else
 	echo 'install git'
 	$os_install install -y git
+fi
 
 # check .vimrc exists or not
 if [ -e .vimrc ]

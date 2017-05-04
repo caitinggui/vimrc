@@ -52,9 +52,9 @@ fi
 echo 'install basic environment'
 sleep 1
 if type pip >/dev/null 2>&1; then
-	echo 'exists pip'
+	echo 'pip exists'
 else
-	if $OS='centos'; then
+	if $OS = 'centos'; then
 		$os_install -y epel-release
 	fi
 	$os_install install -y python-pip
@@ -72,17 +72,15 @@ vim +PluginInstall +qall;
 echo 'install YouCompleteMe, and it will cost some time'
 sleep 1
 cd ~/.vim/bundle/YouCompleteMe;
-if [ $OS='centos' ]
+if [ $OS = 'centos' ]
 then {
 	$os_install install -y cmake;
 	$os_install groupinstall -y "Development Tools";
     ./install.py --clang-completer;
 }
-elif [ $OS='debian' ]
+elif [ $OS = 'debian' ]
 then {
-	echo 'install python-dev'
     $os_install install -y python-dev python3-dev;
-	echo 'install cmake'
     $os_install install -y build-essential cmake;
     ./install.py --clang-completer;
 }

@@ -14,6 +14,10 @@ centos)
     OS='centos'
 	os_install='sudo yum'
 	;;
+*)
+	echo 'This script do not support your system'
+	exit 1
+	;;
 esac
 #centos|fedora|rhel)
 
@@ -50,6 +54,9 @@ sleep 1
 if type pip >/dev/null 2>&1; then
 	echo 'exists pip'
 else
+	if $OS='centos'; then
+		$os_install -y epel-release
+	fi
 	$os_install install -y python-pip
 fi
 sudo pip install autopep8
@@ -73,12 +80,12 @@ then {
 }
 elif [ $OS='debian' ]
 then {
-    $os_install install -y build-essential cmake;
+	echo 'install python-dev'
     $os_install install -y python-dev python3-dev;
+	echo 'install cmake'
+    $os_install install -y build-essential cmake;
     ./install.py --clang-completer;
 }
-else
-	echo 'This script can not install YouCompleteMe, please install it manually'
 fi
 
 echo 'install completed'

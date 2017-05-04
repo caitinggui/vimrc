@@ -3,9 +3,28 @@
 
 [[ -d ~/.vim ]] || mkdir ~/.vim || echo 'create ~/.vim'
 
-# vim pulgin controller - vundle
-[[ -d ~/.vim/bundle/Vundle.vim  ]] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
+# judge OS
+source /etc/os-release
+case $ID in
+debian|ubuntu|devuan)
+    OS='debian'
+	os_install='sudo apt-get'
+	;;
+centos)
+    OS='centos'
+	os_install='sudo yum'
+	;;
+esac
+#centos|fedora|rhel)
 
+# check git exists or not
+if hash git 2>/dev/null; then
+	echo 'git exists'
+else
+	echo 'install git'
+	$os_install install -y git
+
+# check .vimrc exists or not
 if [ -e .vimrc ]
 then
 	echo '.vimrc exists'
@@ -15,24 +34,20 @@ else
 	exit -1
 fi
 
-# judge OS
-source /etc/os-release
-case $ID in
-debian|ubuntu|devuan)
-    OS='debian'
-	os_install='sudo apt-get'
-	;;
-centos|fedora|rhel)
-    OS='centos'
-	os_install='sudo yum'
-	;;
-esac
+
+# vim pulgin controller - vundle
+[[ -d ~/.vim/bundle/Vundle.vim  ]] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
 
 # install basic environment
 echo 'install basic environment'
+if type pip >/dev/null 2>&1; then
+	echo 'exists pip'
+else
+	$os_install install -y python-pip
+fi
 sudo pip install autopep8
 sudo pip install flake8
-$os_install install ctags
+$os_install install -y ctags
 
 # install vim plugin
 echo 'install vim plugin'
@@ -46,10 +61,17 @@ else
     cd ~/.vim/bundle/YouCompleteMe;
 	if [ $OS='centos' ]
 	then
-		$os_install install cmake
-		$os_install groupinstall "Developments Tools"
+		$os_install install -y cmake
+		$os_install groupinstall -y "Development Tools"
+	    ./install.py --clang-completer
+	elif [ $OS='debian' ]
+	then
+        $os_install install -y build-essential cmake
+		$os_install install -y python-dev python3-dev
+	    ./install.py --clang-completer
+	else
+		echo 'This script can not install YouCompleteMe, please install it manually'
 	fi
-	./install.py --clang-completer
 fi;
 
 echo 'setup completed successfully'

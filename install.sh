@@ -1,7 +1,7 @@
 #!/bin/bash
 # @author ciaitnggui<caitinggui@qq.com>
 
-[[ -d ~/.vim ]] || mkdir ~/.vim || echo 'create ~/.vim'
+[[ -d ~/.vim ]] || mkdir ~/.vim
 
 # judge OS
 source /etc/os-release
@@ -37,10 +37,16 @@ fi
 
 
 # vim pulgin controller - vundle
-[[ -d ~/.vim/bundle/Vundle.vim  ]] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
+echo 'install Vundle'
+if [[ -d ~/.vim/bundle/Vundle.vim  ]]; then
+    echo 'Vundle exists'
+else
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
+fi
 
 # install basic environment
 echo 'install basic environment'
+sleep 1
 if type pip >/dev/null 2>&1; then
 	echo 'exists pip'
 else
@@ -51,30 +57,28 @@ sudo pip install flake8
 $os_install install -y ctags
 
 # install vim plugin
-echo 'install vim plugin'
-vim +PluginInstall! +qall;
+echo 'install vim plugin, and it will cost some minutes'
+sleep 1
+vim +PluginInstall +qall;
 
 # install YouCompleteMe
 echo 'install YouCompleteMe, and it will cost some time'
-if [[ -d ~/.vim/bundle/YouCompleteMe  ]]; then
-    echo "YouCompleteMe Exists";
+sleep 1
+cd ~/.vim/bundle/YouCompleteMe;
+if [ $OS='centos' ]
+then {
+	$os_install install -y cmake;
+	$os_install groupinstall -y "Development Tools";
+    ./install.py --clang-completer;
+}
+elif [ $OS='debian' ]
+then {
+    $os_install install -y build-essential cmake;
+    $os_install install -y python-dev python3-dev;
+    ./install.py --clang-completer;
+}
 else
-    cd ~/.vim/bundle/YouCompleteMe;
-	if [ $OS='centos' ]
-	then {
-		$os_install install -y cmake;
-		$os_install groupinstall -y "Development Tools";
-	    ./install.py --clang-completer;
-    }
-	elif [ $OS='debian' ]
-	then {
-        $os_install install -y build-essential cmake;
-		$os_install install -y python-dev python3-dev;
-	    ./install.py --clang-completer;
-    }
-	else
-		echo 'This script can not install YouCompleteMe, please install it manually'
-	fi
-fi;
+	echo 'This script can not install YouCompleteMe, please install it manually'
+fi
 
-echo 'setup completed successfully'
+echo 'install completed'

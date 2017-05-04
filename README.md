@@ -5,7 +5,17 @@ A beautiful vim IDE for Python
 
 
 
-安装方法：
+自动安装:
+
+
+    在vimrc目录下执行:
+
+
+    $ sudo ./install.py
+
+
+
+手动安装方法：
 
 
 1、复制.vimrc到~/
@@ -35,16 +45,18 @@ A beautiful vim IDE for Python
 5、安装YouCompleteMe：（如果有异常请参考官方文档）
 
 
-  $ sudo yum install cmake  # centos的依赖环境
-
-
+  # centos 系统下  
+  $ sudo yum install cmake  # centos的依赖环境  
   $ sudo yum groupinstall "Development Tools"  
+  $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
+  $ ./install.py --clang-completer     # --clang-completer表示支持C类语言的代码补全  
 
 
-  $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译
-
-
-  $ ./install.py --clang-completer     # --clang-completer表示支持C类语言的代码补全
+  # ubuntu 64系统下  
+  $ sudo apt-get install -y build-essential cmake  
+  $ sudo apt-get install -y python-dev python3-dev  
+  $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
+  $ ./install.py --clang-completer
 
 
 

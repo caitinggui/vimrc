@@ -54,8 +54,8 @@ sleep 1
 if type pip >/dev/null 2>&1; then
 	echo 'pip exists'
 else
-	if $OS = 'centos'; then
-		$os_install -y epel-release
+	if [ $OS = 'centos' ]; then
+		$os_install install -y epel-release
 	fi
 	$os_install install -y python-pip
 fi

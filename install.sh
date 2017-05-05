@@ -61,7 +61,19 @@ else
 fi
 sudo pip install autopep8
 sudo pip install flake8
+# For tagbar
 $os_install install -y ctags
+
+# For YouCompleteMe
+if [ $OS = 'centos' ]
+then
+	$os_install install -y cmake;
+	$os_install groupinstall -y "Development Tools";
+elif [ $OS = 'debian' ]
+then
+    $os_install install -y python-dev python3-dev;
+    $os_install install -y build-essential cmake;
+fi
 
 # install vim plugin
 echo 'install vim plugin, and it will cost some minutes'
@@ -72,18 +84,6 @@ vim +PluginInstall +qall;
 echo 'install YouCompleteMe, and it will cost some time'
 sleep 1
 cd ~/.vim/bundle/YouCompleteMe;
-if [ $OS = 'centos' ]
-then {
-	$os_install install -y cmake;
-	$os_install groupinstall -y "Development Tools";
-    ./install.py --clang-completer;
-}
-elif [ $OS = 'debian' ]
-then {
-    $os_install install -y python-dev python3-dev;
-    $os_install install -y build-essential cmake;
-    ./install.py --clang-completer;
-}
-fi
+./install.py --clang-completer;
 
 echo 'install completed'

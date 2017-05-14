@@ -101,10 +101,10 @@ Plugin 'scrooloose/nerdtree'
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
+    \ "Untracked" : "^",
     \ "Renamed"   : "➜",
     \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
+    \ "Deleted"   : "-",
     \ "Dirty"     : "✗",
     \ "Clean"     : "✔︎",
     \ 'Ignored'   : '☒',

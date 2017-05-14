@@ -149,3 +149,6 @@ let g:tagbar_width=25
 let g:tagbar_sort=1
 au BufNewFile,BufRead *.py,*.c,*.cpp call tagbar#autoopen()
 Plugin 'majutsushi/tagbar'
+
+map f <Plug>CtrlSFPrompt
+Plugin 'dyng/ctrlsf.vim'

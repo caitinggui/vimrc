@@ -63,6 +63,8 @@ sudo pip install autopep8
 sudo pip install flake8
 # For tagbar
 $os_install install -y ctags
+# For ctrlsf: global character search
+$os_install install -y ack
 
 # For YouCompleteMe
 if [ $OS = 'centos' ]

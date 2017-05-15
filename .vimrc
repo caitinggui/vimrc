@@ -170,6 +170,8 @@ Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
 colorscheme solarized
 set background=dark
+" set more blue
+let &background="light"
 call togglebg#map("<F4>")
 
 

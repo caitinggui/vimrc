@@ -42,6 +42,9 @@ A useful and beautiful vim IDE for Python
   $ sudo yum install ctags  # for ubuntu: sudo apt-get install ctags
 
 
+  $ sudo yum install acd  # for ubuntu: sudo apt-get install ack-grep
+
+
 5、安装YouCompleteMe：（如果有异常请参考官方文档）
 
 

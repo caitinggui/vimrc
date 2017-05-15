@@ -3,8 +3,6 @@ set encoding=utf-8           " 设置支持utf-8格式文件
 set clipboard=unnamed        "使用系统剪切板
 set nu                       "使用行号
 set tabstop=4                "设置table长度"
-set cursorline               " 突出显示当前行
-set t_Co=256
 let mapleader=";"
 
 
@@ -169,16 +167,23 @@ Plugin 'dyng/ctrlsf.vim'
 " remember the Plugin should be first or it will not work
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
-colorscheme solarized
+if exists('g:loaded_togglebg')
+	colorscheme solarized
+	call togglebg#map("<F4>")
+endif
+if exists(":ToggleBG")
+    colorscheme solarized
+    call togglebg#map("<F4>")
+    set cursorline               " 突出显示当前行
+endif
 set background=dark
 " set more blue
 let &background="light"
-call togglebg#map("<F4>")
-
 
 
 " For status bar
 set guifont=Inconsolata\ for\ Powerline:h15
+set t_Co=256
 set laststatus=2
 " 如果状态栏出现乱码，请修改'fancy'为'unicode'
 let g:Powerline_symbols = 'fancy'

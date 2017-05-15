@@ -167,11 +167,7 @@ Plugin 'dyng/ctrlsf.vim'
 " remember the Plugin should be first or it will not work
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
-if exists('g:loaded_togglebg')
-	colorscheme solarized
-	call togglebg#map("<F4>")
-endif
-if exists(":ToggleBG")
+if !exists("install_flag")
     colorscheme solarized
     call togglebg#map("<F4>")
     set cursorline               " 突出显示当前行

@@ -81,7 +81,7 @@ fi
 # install vim plugin
 echo 'install vim plugin, and it will cost some minutes'
 sleep 1
-vim +PluginInstall +qall;
+vim --cmd "let install_flag=1"  +PluginInstall +qall;
 
 # install YouCompleteMe
 echo 'install YouCompleteMe, and it will cost some time'

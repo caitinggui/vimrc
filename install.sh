@@ -90,3 +90,7 @@ cd ~/.vim/bundle/YouCompleteMe;
 ./install.py --clang-completer;
 
 echo 'install completed'
+echo "如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'"
+echo "如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'"
+echo "如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'"
+echo "重要的事情说三遍~"

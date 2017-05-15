@@ -4,6 +4,7 @@ set clipboard=unnamed        "使用系统剪切板
 set nu                       "使用行号
 set tabstop=4                "设置table长度"
 set cursorline               " 突出显示当前行
+set t_Co=256
 let mapleader=";"
 
 
@@ -179,9 +180,9 @@ call togglebg#map("<F4>")
 " For status bar
 set guifont=Inconsolata\ for\ Powerline:h15
 set laststatus=2
-set t_Co=256
+" 如果状态栏出现乱码，请修改'fancy'为'unicode'
 let g:Powerline_symbols = 'fancy'
-let Powerline_symbols='compatible'
+"let Powerline_symbols='compatible'
 Plugin 'Lokaltog/vim-powerline'
 
 

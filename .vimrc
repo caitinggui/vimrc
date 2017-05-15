@@ -193,9 +193,3 @@ inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 inoremap <C-e> <End>
 inoremap <C-a> <Home>
-
-" 窗口切割之后的光标移动
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l

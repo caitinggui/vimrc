@@ -1,5 +1,5 @@
 # vimrc
-A beautiful vim IDE for Python
+A useful and beautiful vim IDE for Python
 
 首先确保vim版本大于7.4, python版本大于2.6（YouCompleteMe暂不支持python3）
 
@@ -67,7 +67,7 @@ A beautiful vim IDE for Python
 F2:  nerdtree，文件目录关闭打开
 
 
-F2:  tagbar，大纲式导航，包括类、函数、变量
+F3:  tagbar，大纲式导航，包括类、函数、变量
 
 
 F5:  运行文件

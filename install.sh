@@ -48,6 +48,17 @@ else
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
 fi
 
+# For YouCompleteMe and python-dev
+if [ $OS = 'centos' ]
+then
+	$os_install install -y cmake;
+	$os_install groupinstall -y "Development Tools";
+elif [ $OS = 'debian' ]
+then
+    $os_install install -y python-dev python3-dev;
+    $os_install install -y build-essential cmake;
+fi
+
 # install basic environment
 echo 'install basic environment'
 sleep 1
@@ -65,17 +76,6 @@ sudo pip install flake8
 $os_install install -y ctags
 # For ctrlsf: global character search
 $os_install install -y ack
-
-# For YouCompleteMe
-if [ $OS = 'centos' ]
-then
-	$os_install install -y cmake;
-	$os_install groupinstall -y "Development Tools";
-elif [ $OS = 'debian' ]
-then
-    $os_install install -y python-dev python3-dev;
-    $os_install install -y build-essential cmake;
-fi
 
 # install vim plugin
 echo 'install vim plugin, and it will cost some minutes'

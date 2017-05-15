@@ -177,8 +177,7 @@ call togglebg#map("<F4>")
 
 
 " For status bar
-set guifont=PowerlineSymbols\ for\ Powerline
-set nocompatible
+set guifont=Inconsolata\ for\ Powerline:h15
 set laststatus=2
 set t_Co=256
 let g:Powerline_symbols = 'fancy'

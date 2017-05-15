@@ -3,6 +3,7 @@ set encoding=utf-8           " 设置支持utf-8格式文件
 set clipboard=unnamed        "使用系统剪切板
 set nu                       "使用行号
 set tabstop=4                "设置table长度"
+set cursorline               " 突出显示当前行
 let mapleader=";"
 
 set nocompatible             " required
@@ -150,5 +151,36 @@ let g:tagbar_sort=1
 au BufNewFile,BufRead *.py,*.c,*.cpp call tagbar#autoopen()
 Plugin 'majutsushi/tagbar'
 
+" For global characters search
 map f <Plug>CtrlSFPrompt
 Plugin 'dyng/ctrlsf.vim'
+
+Plugin 'altercation/vim-colors-solarized'
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
+call togglebg#map("<F4>")
+
+
+" For status bar
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set laststatus=2
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+let Powerline_symbols='compatible'
+Plugin 'Lokaltog/vim-powerline'
+
+" 插入模式下的光标移动
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
+
+" 窗口切割之后的光标移动
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l

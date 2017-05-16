@@ -11,7 +11,6 @@
     $ ./install.py
 
 2. ### 手动安装方法：
-
   1. 复制.vimrc到~/:  
      $ cp .vimrc ~/
   2. $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim

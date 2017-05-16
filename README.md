@@ -11,39 +11,39 @@
     $ ./install.py
 
 2. ### 手动安装方法：
-  1. 复制.vimrc到~/:  
-     $ cp .vimrc ~/
-  2. $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  3. $ vim  
-     :PluginInstall
-  4. 安装必要的环境:  
-  
-     ```
-     $ sudo pip install autopep8
-     $ sudo python2 -m pip install flake8  # 安装flake8包
-     $ sudo yum install ctags  # for ubuntu: sudo apt-get install ctags
-     $ sudo yum install ack  # for ubuntu: sudo apt-get install ack-grep
-     ```
+    1. 复制.vimrc到~/:  
+       $ cp .vimrc ~/
+    2. $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    3. $ vim  
+       :PluginInstall
+    4. 安装必要的环境:  
 
-  5. 安装YouCompleteMe：（如果有异常请参考官方文档）  
-  
-     **centos系统下** 
-     
-     ```  
-     $ sudo yum install cmake  # centos的依赖环境  
-     $ sudo yum groupinstall "Development Tools"  
-     $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
-     $ ./install.py --clang-completer     # --clang-completer表示支持C类语言的代码补全
-     ```  
+       ```
+       $ sudo pip install autopep8
+       $ sudo python2 -m pip install flake8  # 安装flake8包
+       $ sudo yum install ctags  # for ubuntu: sudo apt-get install ctags
+       $ sudo yum install ack  # for ubuntu: sudo apt-get install ack-grep
+       ```
 
-     **ubuntu系统下**  
+    5. 安装YouCompleteMe：（如果有异常请参考官方文档）  
+  
+       **centos系统下** 
      
-     ```
-     $ sudo apt-get install -y build-essential cmake  
-     $ sudo apt-get install -y python-dev python3-dev  
-     $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
-     $ ./install.py --clang-completer
-     ```
+       ```
+       $ sudo yum install cmake  # centos的依赖环境  
+       $ sudo yum groupinstall "Development Tools"  
+       $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
+       $ ./install.py --clang-completer     # --clang-completer表示支持C类语言的代码补全
+       ```
+
+       **ubuntu系统下**  
+     
+       ```
+       $ sudo apt-get install -y build-essential cmake  
+       $ sudo apt-get install -y python-dev python3-dev  
+       $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
+       $ ./install.py --clang-completer
+       ```
 
 ## 使用方法：
 

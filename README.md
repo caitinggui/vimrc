@@ -83,6 +83,17 @@
   - o:         打开/折叠标签  
   - \<space\>: 显示定义  
 
+5. 查找/替换说明
+  - 查找：在普通模式下，按'/'或'?'，然后输入要查找的字符，Enter
+  - 替换：在普通模式下，按:%s/origin pattern/the pattern you want/g
+      - 第一个词表示要替换的，第二个词表示要替换成的结果，/g表示全局替换
+  - 默认区分大小写
+      - :set ignorecase //忽略大小写，仅在当前vim生效，且重新打开失效
+      - :set noignorecase //恢复到大小写敏感
+  - '\>' 是一个特殊的记号，表示只匹配单词末尾。类似地，'\<' 只匹配单词的开头
+      - /\<query\>     表示全词匹配query
+      - :%s/query\>/querys/g     表示用querys替换词末尾的query
+
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'

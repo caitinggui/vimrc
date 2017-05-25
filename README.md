@@ -85,8 +85,14 @@
 
 5. 查找/替换说明
   - 查找：在普通模式下，按'/'或'?'，然后输入要查找的字符，Enter
-  - 替换：在普通模式下，按:%s/origin pattern/the pattern you want/g
-      - 第一个词表示要替换的，第二个词表示要替换成的结果，/g表示全局替换
+  - 替换：在普通模式下，按:s/origin pattern/the pattern you want/g
+      - 第一个词表示要替换的，第二个词表示要替换成的结果，/g表示当前行内所有替换，如果没有/g就表示替换行内第一个
+      - :m,ns/origin pattern/the pattern you want/g 表示替换从m到n行的每一行的所有
+          - % 表示全部行 :%s/a/b/g
+          - $ 表示最后一行 :10,$s/a/b
+          - . 表示当前行
+          - 也可以直接用数字
+      - 可以用'#'代替'/'，这样单词中的'/'也可以被处理
   - 默认区分大小写
       - :set ignorecase //忽略大小写，仅在当前vim生效，且重新打开失效
       - :set noignorecase //恢复到大小写敏感

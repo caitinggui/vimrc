@@ -85,6 +85,8 @@
 
 5. 查找/替换说明
   - 查找：在普通模式下，按'/'或'?'，然后输入要查找的字符，Enter
+      - '/'表示向下搜索。在第一次搜索之后输入n表示继续向下，N表示反方向
+      - 另一种区分大小写，'\\c'表示忽略大小写, '\\C'表示区分大小写，比如：'/\\cword'
   - 替换：在普通模式下，按:s/origin pattern/the pattern you want/g
       - 第一个词表示要替换的，第二个词表示要替换成的结果，/g表示当前行内所有替换，如果没有/g就表示替换行内第一个
       - :m,ns/origin pattern/the pattern you want/g 表示替换从m到n行的每一行的所有
@@ -99,6 +101,8 @@
   - '\\\>' 是一个特殊的记号，表示只匹配单词末尾。类似地，'\\\<' 只匹配单词的开头
       - /\\\<query\\\>     表示全词匹配query
       - :%s/query\\\>/querys/g     表示用querys替换词末尾的query
+  - 可使用正则, '.'表示任意**一个**字符，'\*'表示前面的重复0次或多次
+  - 每行插入2个空格：`:%s/^/>  /` ,也可以先选择，然后输入'\>'
 
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'

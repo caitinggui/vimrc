@@ -69,6 +69,7 @@ if [ $OS = 'centos' ]
 then
     $os_install install -y ack
 	$os_install install -y cmake;
+	$os_install install -y python-devel
 	$os_install groupinstall -y "Development Tools";
 
 elif [ $OS = 'debian' ]

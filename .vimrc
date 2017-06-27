@@ -39,10 +39,10 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.js,*.html,*.css
+    \ setlocal tabstop=2 |
+    \ setlocal softtabstop=2 |
+	\ setlocal shiftwidth=2
 hi BadWhitespace guifg=gray guibg=red ctermfg=gray ctermbg=red
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 Plugin 'vim-scripts/indentpython.vim'

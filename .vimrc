@@ -4,6 +4,7 @@ set clipboard=unnamed        "使用系统剪切板
 set nu                       "使用行号
 set tabstop=4                "设置table长度"
 set pastetoggle=<F6>         "在paste和nopaste中切换, 解决从剪切板黏贴缩进异常问题
+set fileencoding=utf-8       "设置保存文件的格式为utf-8,在已打开的文件中输入此命令会修改已打开的文件编码
 let mapleader=";"
 
 

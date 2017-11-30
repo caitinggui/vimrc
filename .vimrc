@@ -8,6 +8,7 @@ set fileencoding=utf-8       "设置保存文件的格式为utf-8,在已打开�
 let mapleader=";"
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936  "逐一探测即将打开的文件的字符编码方式
 set encoding=utf-8           "Vim 内部使用的字符编码方式，包括 Vim 的 buffer (缓冲区)、菜单文本、消息文本等
+set termencoding=utf-8       "vim显示的编码，需要和当前终端编码设置相同
 ":set fileencoding=utf-8     "在打开的终端中输入则强制保存改文件为utf-8编码，不管它之前是什么编码
 
 

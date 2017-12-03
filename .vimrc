@@ -1,6 +1,7 @@
 set nocompatible             " 设置不兼容vi"
 set encoding=utf-8           " 设置支持utf-8格式文件
 set clipboard=unnamed        "使用系统剪切板
+set backspace=indent,eol,start "设置退格键生效
 set nu                       "使用行号
 set tabstop=4                "设置table长度"
 set pastetoggle=<F6>         "在paste和nopaste中切换, 解决从剪切板黏贴缩进异常问题

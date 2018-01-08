@@ -58,7 +58,8 @@
   - \<leader\>cc, cu:  多行注释, 取消注释
   - \<space\>:  代码折叠
   - \<leader\>g:  跳转到定义处
-  - Ctrl + o:  从定义处返回
+  - Ctrl + o:  从定义处返回, 可以理解为后退
+  - Ctrl + i:  前进，和Ctrl + o相反
   - Ctrl + p:  项目文件查找
   - :Autopep8:  采用pep8格式化代码
 

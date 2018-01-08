@@ -166,6 +166,7 @@ Plugin 'majutsushi/tagbar'
 
 " For global characters search
 map f <Plug>CtrlSFPrompt
+let g:ctrlsf_ignore_dir = ["tmp", "env", "venv", "logs"]
 Plugin 'dyng/ctrlsf.vim'
 
 

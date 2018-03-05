@@ -115,6 +115,9 @@
 - 将encoding的编码转成termencoding的编码，并显示，如果termencoding的编码值和当前终端的设置值一直，那么显示正常，此时我们就可以开始编辑这个文件了
 - 编辑完成后保存文件时，再次对比 fileencoding 和 encoding 的值。若不同，再次调用 iconv 将即将保存的 buffer 中的文本转换为 fileencoding 所描述的字符编码方式，并保存到指定的文件中。
 
+### 关于flake8格式检查  
+复制当前目录的`flake8`到`~/.config/`中即可自定义配置
+
 
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'

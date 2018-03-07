@@ -81,8 +81,16 @@ Bundle 'Valloric/YouCompleteMe'
 
 " For syntastic 
 let python_highlight_all=1
+let g:syntastic_python_checkers=['flake8'] " 检查代码风格，不涉及到运行错误
+"let g:syntastic_python_checkers=['pylint'] " pylint检测太详细, 速度慢
+"let g:syntastic_always_populate_loc_list = 1  " 默认不开启错误窗口
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 syntax on
 Plugin 'scrooloose/syntastic'
+
+let g:flake8_quickfix_height=10
 Plugin 'nvie/vim-flake8'
 
 
@@ -142,7 +150,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 "autopep8设置"
 let g:autopep8_disable_show_diff=1
-let g:autopep8_max_line_length=79
+let g:autopep8_max_line_length=120
 Plugin 'tell-k/vim-autopep8'
 
 

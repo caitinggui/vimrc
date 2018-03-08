@@ -85,7 +85,7 @@ let g:syntastic_python_checkers=['flake8'] " 检查代码风格，不涉及到�
 "let g:syntastic_python_checkers=['pylint'] " pylint检测太详细, 速度慢
 "let g:syntastic_always_populate_loc_list = 1  " 默认不开启错误窗口
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 syntax on
 Plugin 'scrooloose/syntastic'

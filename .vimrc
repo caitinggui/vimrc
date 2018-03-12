@@ -6,12 +6,24 @@ set nu                       "使用行号
 set tabstop=4                "设置table长度"
 set pastetoggle=<F6>         "在paste和nopaste中切换, 解决从剪切板黏贴缩进异常问题
 set fileencoding=utf-8       "设置保存文件的格式为utf-8,在已打开的文件中输入此命令会修改已打开的文件编码
+
+set ignorecase               " 查找时忽略大小写
+set smartcase                " 如果查找的内容有一个是大写的则不忽略大小写
+set incsearch                " 随着键入即时搜索
+set hlsearch                 " 高亮搜索结果
+
 let mapleader=";"
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936  "逐一探测即将打开的文件的字符编码方式
 set encoding=utf-8           "Vim 内部使用的字符编码方式，包括 Vim 的 buffer (缓冲区)、菜单文本、消息文本等
 set termencoding=utf-8       "vim显示的编码，需要和当前终端编码设置相同
 ":set fileencoding=utf-8     "在打开的终端中输入则强制保存改文件为utf-8编码，不管它之前是什么编码
-map <leader>sudo :w !sudo tee %<CR>   "临时使用root权限保存文档
+map <leader>sudo :w !sudo tee %<CR>   " 临时使用root权限保存文档
+" 为当前单词加引号或者双引号
+nnoremap <leader>ww' viw<esc>a'<esc>hbi'<esc>lel"
+nnoremap <leader>ww" viw<esc>a"<esc>hbi"<esc>lel"
+" 横向或纵向切分当前文件
+nnoremap <leader>vv :vsplit <cr>
+nnoremap <leader>sv :split <cr>
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim

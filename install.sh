@@ -88,7 +88,7 @@ vim --cmd "let install_flag=1"  +PluginInstall +qall;
 echo 'install YouCompleteMe, and it will cost some time'
 sleep 1
 cd ~/.vim/bundle/YouCompleteMe;
-./install.py --clang-completer;
+./install.py --clang-completer --gocode-completer;
 
 echo 'install completed'
 echo "如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'"

@@ -67,6 +67,9 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 Plugin 'vim-scripts/indentpython.vim'
 
 
+Plugin 'fatih/vim-go'
+"Plugin 'nsf/gocode', {'rtp': 'vim/'}
+
 
 " For YouCompleteMe
 let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
@@ -179,7 +182,7 @@ Plugin 'kien/ctrlp.vim'
 map <F3> :TagbarToggle<CR>
 let g:tagbar_width=25
 let g:tagbar_sort=1
-au BufNewFile,BufRead *.py,*.c,*.cpp call tagbar#autoopen()
+au BufNewFile,BufRead *.py,*.c,*.cpp,*.go call tagbar#autoopen()
 Plugin 'majutsushi/tagbar'
 
 

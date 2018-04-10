@@ -154,19 +154,10 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 
 
-" For run python
-map <F5> :call RunPython()<CR>
-function RunPython()
-  let mp = &makeprg
-  let ef = &errorformat
-  let exeFile = expand("%:t")
-  setlocal makeprg=python\ -u
-  set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-  silent make %
-  copen
-  let &makeprg = mp
-  let &errorformat = ef
-endfunction
+" 直接运行python, bash, 或者go代码
+au BufNewFile,BufRead *.py map <F5> :!python %<CR>
+au BufNewFile,BufRead *.sh map <F5> :!bash %<CR>
+au BufNewFile,BufRead *.go map <F5> :GoRun<CR>
 
 
 

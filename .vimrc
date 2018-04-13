@@ -127,7 +127,7 @@ Plugin 'nvie/vim-flake8'
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeChDirMode=1
 let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', "__pycache__"]
 let NERDTreeWinSize=25
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd l

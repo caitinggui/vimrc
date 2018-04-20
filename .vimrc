@@ -157,7 +157,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " 直接运行python, bash, 或者go代码
 au BufNewFile,BufRead *.py map <F5> :!python %<CR>
 au BufNewFile,BufRead *.sh map <F5> :!bash %<CR>
-au BufNewFile,BufRead *.go map <F5> :GoRun<CR>
+au BufNewFile,BufRead *.go map <F5> :!go run %<CR>
 
 
 

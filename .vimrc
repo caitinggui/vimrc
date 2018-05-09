@@ -229,6 +229,9 @@ inoremap <C-l> <Right>
 inoremap <C-e> <End>
 inoremap <C-a> <Home>
 
+" 切换tab页
+nnoremap <C-w><C-n> :tabnext <cr>
+
 
 " 自动添加头部注释
 au BufNewFile *.py call AddPythonTitle()

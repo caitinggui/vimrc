@@ -72,6 +72,7 @@
   - ctrl + w + h:    光标 focus 左侧树形目录  
   - ctrl + w + l:    光标 focus 右侧文件显示窗口  
   - ctrl + w + w:    光标自动在左右侧窗口切换  
+  - ctrl + w + n:    切换到下一个Tab
   - t:       在新 Tab 中打开选中文件/书签，并跳到新 Tab  
   - T:       在新 Tab 中打开选中文件/书签，但不跳到新 Tab  
   - i:       split 一个新窗口打开选中文件，并跳到该窗口  

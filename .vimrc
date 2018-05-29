@@ -27,6 +27,8 @@ nnoremap <leader>ww" viw<esc>a"<esc>hbi"<esc>lel"
 " 横向或纵向切分当前文件
 nnoremap <leader>vv :vsplit <cr>
 nnoremap <leader>sv :split <cr>
+" 在visual模式以"#"前空两个空格对齐
+vmap <leader>3 :Tabularize /  #<cr>
 
 " add vertical lines on columns
 set colorcolumn=80,120
@@ -71,6 +73,9 @@ au BufNewFile,BufRead *.js,*.html,*.css
 hi BadWhitespace guifg=gray guibg=red ctermfg=gray ctermbg=red
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 Plugin 'vim-scripts/indentpython.vim'
+
+" 符号对齐
+Plugin 'godlygeek/tabular'
 
 
 " By default syntax-highlighting for Functions, Methods and Structs is

@@ -238,7 +238,7 @@ inoremap <C-a> <Home>
 nnoremap <C-w><C-n> :tabnext <cr>
 
 
-" 自动添加头部注释
+" 自动添加头部注释, 如果是python3可以删掉0, 7行
 au BufNewFile *.py call AddPythonTitle()
 function AddPythonTitle()
         call append(0,"# -*- coding: utf-8 -*-")
@@ -248,5 +248,6 @@ function AddPythonTitle()
         call append(4," * Created time  : ".strftime("%Y-%m-%d %H:%M"))
         call append(5," * Description   : ")
         call append(6,"'''")
+		call append(7,"from __future__ import print_function, unicode_literals, division, absolute_import")
         echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
 endfunction

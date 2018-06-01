@@ -121,7 +121,7 @@
 复制当前目录的`flake8`到`~/.config/`中即可自定义配置
 
 ### 关于golang的代码补全和源码跳转  
-安装完后在vim执行`:GoInstallBinaries`
+安装完后在vim执行`:GoInstallBinaries`　　　　(请先确保GOROOT和GOPATH已经正确配置)
 
 
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'

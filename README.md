@@ -33,7 +33,7 @@
        $ sudo yum install cmake  # centos的依赖环境  
        $ sudo yum groupinstall "Development Tools"  
        $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
-       $ ./install.py --clang-completer     # --clang-completer表示支持C类语言的代码补全
+       $ ./install.py --clang-completer  --gocode-completer   # --clang-completer表示支持C类语言的代码补全
        ```
 
        **ubuntu系统下**  
@@ -42,7 +42,7 @@
        $ sudo apt-get install -y build-essential cmake  
        $ sudo apt-get install -y python-dev python3-dev  
        $ cd ~/.vim/bundle/YouCompleteMe # 进行YCM编译  
-       $ ./install.py --clang-completer
+       $ ./install.py --clang-completer --gocode-completer  # --gocode-completer表示支持golang的代码补全
        ```
 
 ## 使用方法：
@@ -119,6 +119,9 @@
 
 ### 关于flake8格式检查  
 复制当前目录的`flake8`到`~/.config/`中即可自定义配置
+
+### 关于golang的代码补全和源码跳转  
+安装完后在vim执行`:GoInstallBinaries`
 
 
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'

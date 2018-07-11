@@ -85,7 +85,14 @@ let g:go_highlight_functions=1
 let g:go_highlight_methods=1
 let g:go_highlight_structs=1
 Plugin 'fatih/vim-go'
-"Plugin 'nsf/gocode', {'rtp': 'vim/'}
+
+" For golang debug
+Plugin 'Shougo/vimshell'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'sebdah/vim-delve'
+au BufNewFile,BufRead *.go map <F8> :DlvDebug<CR>
+au BufNewFile,BufRead *.go map <F9> :DlvAddBreakpoint<CR>
+au BufNewFile,BufRead *.go map <F10> :DlvRemoveBreakpoint<CR>
 
 
 " For YouCompleteMe

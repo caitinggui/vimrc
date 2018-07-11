@@ -84,6 +84,9 @@ echo 'install vim plugin, and it will cost some minutes'
 sleep 1
 vim --cmd "let install_flag=1"  +PluginInstall +qall;
 
+# install vimproc for golang debug
+cd ~/.vim/bundle/vimproc.vim && make
+
 # install YouCompleteMe
 echo 'install YouCompleteMe, and it will cost some time'
 sleep 1

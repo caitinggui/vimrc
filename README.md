@@ -51,9 +51,12 @@
   - F2:  nerdtree，文件目录关闭打开
   - F3:  tagbar，大纲式导航，包括类、函数、变量
   - F4:  主题色彩切换
-  - F5:  运行文件
+  - F5:  运行文件, 可执行python, go, shell等文件
   - F6:  从剪贴板黏贴时不会缩进异常，复制完后需要再按一次，否则可能导致插件异常
   - F7:  静态代码检查
+  - F8:  开始go的调试
+  - F10:  在当前行添加go断点
+  - F11:  删除当前行的go断点
   - Tab:  代码补全
   - \<leader\>cc, cu:  多行注释, 取消注释
   - \<space\>:  代码折叠
@@ -132,6 +135,11 @@
 
 ### 关于golang的代码补全和源码跳转  
 安装完后在vim执行`:GoInstallBinaries`　　　　(请先确保GOROOT和GOPATH已经正确配置)
+
+### 关于golang的调试
+- <F8> 仅可在含有main函数的文件运行
+- dlv在vim的命令均以Dlv开头
+- 更多调试的命令在调试界面输help查询(需要进入编辑模式执行，切手动定位到最新行)
 
 
 ##### 如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'

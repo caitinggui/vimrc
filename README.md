@@ -135,6 +135,7 @@
 
 ### 关于golang的代码补全和源码跳转  
 安装完后在vim执行`:GoInstallBinaries`　　　　(请先确保GOROOT和GOPATH已经正确配置)
+还需替换`~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/gocode/`为`https://github.com/mdempsky/gocode`,然后编译好gocode.(原版不再支持go 1.10以上版本的代码补全)
 
 ### 关于golang的调试
 - <F8> 仅可在含有main函数的文件运行

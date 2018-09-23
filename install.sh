@@ -67,10 +67,10 @@ $os_install install -y ctags
 # For YouCompleteMe, python-dev and ctrlsf
 if [ $OS = 'centos' ]
 then
-    $os_install install -y ack
+    $os_install install -y ag
 	$os_install install -y cmake;
 	$os_install install -y python-devel
-	$os_install groupinstall -y "Development Tools";
+	#$os_install groupinstall -y "Development Tools";
 
 elif [ $OS = 'debian' ]
 then
@@ -91,7 +91,7 @@ cd ~/.vim/bundle/vimproc.vim && make
 echo 'install YouCompleteMe, and it will cost some time'
 sleep 1
 cd ~/.vim/bundle/YouCompleteMe;
-./install.py --clang-completer --gocode-completer;
+./install.py --gocode-completer;
 
 echo 'install completed'
 echo "如果vim状态栏出现乱码，请将let g:Powerline_symbols = 'fancy'中的'fancy'修改为'unicode'"

@@ -67,14 +67,14 @@ $os_install install -y ctags
 # For YouCompleteMe, python-dev and ctrlsf
 if [ $OS = 'centos' ]
 then
-    $os_install install -y ag
+    $os_install install -y the_silver_searcher  # ag is faster then ack
 	$os_install install -y cmake;
 	$os_install install -y python-devel
 	#$os_install groupinstall -y "Development Tools";
 
 elif [ $OS = 'debian' ]
 then
-    $os_install install -y ack-grep
+    $os_install install -y silversearcher-ag
     $os_install install -y python-dev python3-dev;
     $os_install install -y build-essential cmake;
 fi

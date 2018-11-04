@@ -48,7 +48,7 @@ filetype plugin indent on    " required
 
 
 " Enable folding
-set foldmethod=indent
+set foldmethod=syntax "代码折叠"
 set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za

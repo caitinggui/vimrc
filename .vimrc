@@ -84,6 +84,7 @@ Plugin 'godlygeek/tabular'
 let g:go_highlight_functions=1
 let g:go_highlight_methods=1
 let g:go_highlight_structs=1
+let g:go_fmt_experimental=1  " 格式化的时候保持折叠状态
 Plugin 'fatih/vim-go'
 
 " For golang debug

@@ -101,7 +101,7 @@ let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
 let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 "收集注释中的字符串
 let g:ycm_autoclose_preview_window_after_completion=1
-"let g:ycm_log_level = 'debug' 
+let g:ycm_log_level = 'debug' 
 " 回车即选中当前项
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 " 表示跳转到定义处
@@ -206,7 +206,7 @@ Plugin 'majutsushi/tagbar'
 
 " For global characters search
 map f <Plug>CtrlSFPrompt
-let g:ctrlsf_ignore_dir = ["tmp", "env", "venv", "logs", ".tox"]
+let g:ctrlsf_ignore_dir = ["tmp", "env", "venv", "logs", ".tox", "_ref"]
 Plugin 'dyng/ctrlsf.vim'
 
 

@@ -1,0 +1,65 @@
+set encoding=utf-8           " 设置支持utf-8格式文件
+set clipboard=unnamed        "使用系统剪切板
+set backspace=indent,eol,start "设置退格键生效
+set tabstop=4                "设置table长度"
+set fileencoding=utf-8
+""设置保存文件的格式为utf-8,在已打开的文件中输入此命令会修改已打开的文件编码
+set history=700              " Sets how many lines of history VIM has to remember
+
+set ignorecase               " 查找时忽略大小写
+set smartcase                " 如果查找的内容有一个是大写的则不忽略大小写
+set incsearch                " 随着键入即时搜索
+set hlsearch                 " 高亮搜索结果
+let mapleader=";"
+" 横向或纵向切分当前文件
+nnoremap <leader>vv :vsplit <cr>
+nnoremap <leader>sv :split <cr>
+" add vertical lines on columns
+set colorcolumn=80,120
+" Enable folding with the spacebar
+set foldmethod=syntax
+nnoremap <Space> zc <cr>
+nnoremap <Enter> zo <cr>
+
+"" 插入模式下的光标移动
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
+
+" 切换tab页
+nnoremap <C-w><C-n> :tabnext <cr>
+nnoremap <C-w><C-b> :tabprevious <cr>
+
+" 跳转到实现
+map <leader>g :action GotoImplementation<CR>
+" 跳转到定义
+nnoremap gd :action GotoDeclaration<CR>
+
+nnoremap <C-o> :action Back <cr>
+nnoremap <C-i> :action Forward<CR>
+
+map <leader>ci <C-/><CR>
+map <leader>f <C-/><CR>
+
+"
+" 映射到idea快捷键
+" 弹出输入框，可以跳到指定类
+nnoremap gc :action GotoClass<CR>
+" 弹出输入框，跳转到指定操作
+nnoremap ga :action GotoAction<CR>
+" 跳转到指定的文件
+nnoremap gf :action GotoFile<CR>
+" 跳转到方法的声明
+nnoremap gs :action GotoSuperMethod<CR>
+" 跳转到测试
+nnoremap gt :action GotoTest<CR>
+" 跳转到变量的声明
+nnoremap gS :action GotoSymbol<CR>
+"
+"查找使用
+nnoremap fu :action FindUsages<CR>
+显示使用
+nnoremap su :action ShowUsages<CR>
